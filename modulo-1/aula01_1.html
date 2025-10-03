@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SGSA — Protótipo</title>
+  <style>
+    :root {
+      --roxo-escuro: #420950;
+      --roxo-profundo: #380047;
+      --roxo-base: #682278;
+      --lilas: #9E67AD;
+      --verde: #1E4E05;
+      --roxo-secundario: #37234F;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      background-color: var(--roxo-escuro);
+      color: #fff;
+    }
+
+    header {
+      background: var(--roxo-profundo);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .kpis { display: grid; gap: 12px; padding: 16px; }
+    .kpi {
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+      background: var(--roxo-base);
+    }
+
+    .kpi.critico { background: var(--verde); color: #fff; }
+
+    @media (min-width: 768px) {
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1200px) {
+      .kpis { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="h4">SGSA</h1>
+  </header>
+  <main>
+    <section aria-labelledby="titulo-dashboard">
+      <h2 id="titulo-dashboard">Dashboard</h2>
+      <div class="kpis">
+        <div class="kpi">Turmas</div>
+        <div class="kpi">Alunos</div>
+        <div class="kpi">Ocorrências</div>
+        <div class="kpi critico">Frequência</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
